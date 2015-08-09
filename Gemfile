@@ -39,6 +39,8 @@ gem 'pg'
 # Use omniauth for authentication
 gem 'omniauth-twitter'
 
+# rails_12factor for heroku
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
