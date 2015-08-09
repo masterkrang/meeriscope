@@ -7,6 +7,10 @@ gem 'rails', '4.2.3'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+# Use twitter bootstrap
+gem 'bootstrap-sass'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -23,6 +27,17 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Use haml for view templating
+gem 'haml'
+
+# Use devise based authentication
+gem 'devise'
+
+# Use postgres db 
+gem 'pg'
+
+# Use omniauth for authentication
+gem 'omniauth-twitter'
 
 
 # Use ActiveModel has_secure_password
@@ -37,6 +52,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # Use rspec for tests
+  gem 'rspec-rails'
+
+  #suppress asset logs
+  gem 'quiet_assets'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

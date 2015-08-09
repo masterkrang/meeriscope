@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Meeriscope
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %nav.navbar
+      %a.navbar-brand{href: "#"} MeeriScope
+      %ul.nav.navbar-nav.pull-right
+        %li= link_to "About", '#'
+        %li= link_to "Contact Us", '#'
+        - if current_user
+          %li= link_to "SignOut", destroy_user_session_path, method: :delete
+        - else
+          %li= link_to "SignIn", "/users/sign_in"
+          
+    %p.notice= notice
+    %p.alert= alert
+    = yield
