@@ -5,6 +5,7 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    %meta{:content => "yNioA7I5RDzrNnSjvwPQZISIUqmsHN0PYlEAcO2Szjs", :name => "google-site-verification"}/
   %body
     %nav.navbar
       %a.navbar-brand{href: "#"} MeeriScope
@@ -15,7 +16,7 @@
           %li= link_to "SignOut", destroy_user_session_path, method: :delete
         - else
           %li= link_to "SignIn", "/users/sign_in"
-          
+
     %p.notice= notice
     %p.alert= alert
     = yield
