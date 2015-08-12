@@ -16,7 +16,11 @@
           %li= link_to "SignOut", destroy_user_session_path, method: :delete
         - else
           %li= link_to "SignIn", "/users/sign_in"
-
-    %p.notice= notice
-    %p.alert= alert
-    = yield
+    %div.container
+      - if notice
+        %h4{align: 'center'}
+          .alert.alert-success.alert-dismissible= notice
+      - if alert
+        %h4{align: 'center'}
+          .alert.alert-danger.alert-dismissible= alert
+      = yield
