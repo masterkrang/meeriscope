@@ -13,14 +13,17 @@
       <div class="signup-form">
         <div class="signup-form-wrap">
           <div class="main-signup-form">
-            <h1>BeMyTv</h1>
+            <a href="/beta_signup"><h1>BeMyTv</h1></a>
             <h2>Monetize your live experiences</h2>
-            <h3>Streamers monetize their live experiences by streaming for money.</h3>
+            <h3>Money may not grow on trees, but it does grow on streams.</h3>
+            <h4>Post your streams</h4>
+            <h4>Engage your fans</h4>
+            <h4>Have fun making money</h4>
+            </ul>
           </div>
         </div>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
-	    <!--<script src="js/jquery.youtubebackground.js"></script>-->
       <script>
       $(document).ready(function() {
         function style() {
@@ -31,6 +34,18 @@
         }
         style();
         $(window).resize(style);
+
+        $('h3').animate({
+          opacity: 1,
+        },1000);
+        var count = 1;
+        $('h4').each(function() {
+          $(this).delay(500 * count).animate({
+            opacity: 1,
+          },1000)
+          count++;
+        })
+
       });
       </script>
   </body>

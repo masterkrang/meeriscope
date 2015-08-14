@@ -6,83 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-    <style>
-    body {
-      font-family: Roboto;
-      color: white;
-      min-width: 768px;
-      overflow: auto;
-    }
-    #wrapper {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0px; left: 0px;
-      background: url() center / cover;
-      z-index: 0;
-    }
-    #overlay {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0px; left: 0px;
-      background: rgba(0,0,0,0.5);
-      z-index: 1;
-    }
-    .signup-form {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0px; left: 0px;
-      z-index: 2;
-    }
-    .main-signup-form {
-      width: 768px;
-      padding: 15px;
-      margin: auto;
-      box-sizing: border-box;
-      background: rgba(0,0,0,0.5);
-      border-radius: 32px;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    #mce-EMAIL {
-      width: calc(468px - 20px);
-      display: block;
-      margin: auto;
-      text-align: center;
-      border-radius: 6px;
-      color: black;
-      font-size: 24px;
-      padding: 10px;
-      font-family: Roboto;
-    }
-    #mc-embedded-subscribe {
-      display: block;
-      margin: 12px auto;
-      width: 468px;
-      text-align: center;
-      font-size: 24px;
-      border-radius: 6px;
-      background: #0094FF;
-      border: none;
-      border-bottom: 5px solid #0071C1;
-      color: white;
-      padding: 10px;
-      font-weight: 600;
-      font-family: Roboto;
-    }
-    #mc-embedded-subscribe:hover {
-      background: #0071C1;
-      border-bottom: 5px solid #005A96;
-      cursor: pointer;
-    }
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    </style>
   </head>
   <body>
       <div id="wrapper"></div>
@@ -90,14 +13,16 @@
       <div class="signup-form">
         <div class="signup-form-wrap">
           <div class="main-signup-form">
-            <h1>BeMyTv</h1>
+            <a href="/beta_signup"><h1>BeMyTv</h1></a>
             <h2>Monetize your live experiences</h2>
-            <h3>Viewers get to view awesome live content!</h3>
+            <h3>Ever wish you could have attended that conference, visited that vacation spot, or just been there? Now you can.</h3>
+            <h4>Pick a stream, any stream.</h4>
+            <h4>Find exclusive experiences.</h4>
+            <h4>Never miss a moment.</h4>
           </div>
         </div>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
-	    <!--<script src="js/jquery.youtubebackground.js"></script>-->
       <script>
       $(document).ready(function() {
         function style() {
@@ -108,6 +33,18 @@
         }
         style();
         $(window).resize(style);
+
+        $('h3').animate({
+          opacity: 1,
+        },1000);
+        var count = 1;
+        $('h4').each(function() {
+          $(this).delay(500 * count).animate({
+            opacity: 1,
+          },1000)
+          count++;
+        })
+
       });
       </script>
   </body>
