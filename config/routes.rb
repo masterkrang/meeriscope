@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
 
   get '/beta_signup' => 'beta_signup#view'
@@ -10,5 +11,7 @@ Rails.application.routes.draw do
 
   resources :landing, only: :index
   resources :home, only: :index
+
+  resources :streams
 
 end
