@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
+
+  get '/beta_signup' => 'beta_signup#view'
+  get '/beta_signup/streamer' => 'beta_signup#viewStreamer'
+  get '/beta_signup/viewer' => 'beta_signup#viewViewer'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
