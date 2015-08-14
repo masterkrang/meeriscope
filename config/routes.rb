@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :landing, only: :index
   resources :home, only: :index
+  resources :profile, only: :index
 
   resources :streams
 
