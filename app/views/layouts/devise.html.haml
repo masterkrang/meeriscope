@@ -7,15 +7,6 @@
     = csrf_meta_tags
     %meta{:content => "yNioA7I5RDzrNnSjvwPQZISIUqmsHN0PYlEAcO2Szjs", :name => "google-site-verification"}/
   %body
-    %nav.navbar
-      %a.navbar-brand{href: "#"} BeMyTv
-      %ul.nav.navbar-nav.pull-right
-        %li= link_to "About", '#'
-        %li= link_to "Contact Us", '#'
-        - if current_user
-          %li= link_to "SignOut", destroy_user_session_path, method: :delete
-        - else
-          %li= link_to "SignIn", "/users/sign_in"
     %div.container
       - if notice
         %h4{align: 'center'}
