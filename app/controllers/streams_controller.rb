@@ -18,6 +18,6 @@ class StreamsController < ApplicationController
   end
 
   def stream_params
-    params.require(:stream).permit(:title, :description, :location, :start_time, :category, :goal, :price)
+    params.require(:stream).permit(:title, :description, :location, :start_time, :category, :goal, :price, :url)
   end
 end
