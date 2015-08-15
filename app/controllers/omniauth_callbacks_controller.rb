@@ -11,7 +11,5 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   alias_method :twitter, :handle_callback 
-  alias_method :facebok, :handle_callback 
-  alias_method :linkedin, :handle_callback 
-  alias_method :instagram, :handle_callback 
+  alias_method :facebook, :handle_callback
 end

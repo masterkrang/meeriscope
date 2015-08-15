@@ -38,6 +38,7 @@ gem 'pg'
 
 # Use omniauth for authentication
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 # rails_12factor for heroku
 gem 'rails_12factor', group: :production
@@ -54,6 +55,8 @@ gem 'rails_12factor', group: :production
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry'
+  gem 'pry-nav'
 
   # Use rspec for tests
   gem 'rspec-rails'
