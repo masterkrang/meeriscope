@@ -8,6 +8,18 @@ class StreamsController < ApplicationController
     @stream = Stream.new
   end
 
+  def upcoming
+    @streams = current_user.streams.upcoming
+  end
+
+  def finished
+    @streams = current_user.streams.finished
+  end
+
+  def canceled
+    @streams = current_user.streams.canceled
+  end
+
   def create
     @stream = Stream.new stream_params.merge(user_id: current_user.id)
     if @stream.valid?

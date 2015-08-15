@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :streams
+  has_many :tickets
 
   def self.from_omniauth(auth)
     User.where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
