@@ -1,6 +1,7 @@
 class StreamsController < ApplicationController
   before_action :authenticate_user!
   def index
+    @streams = current_user.streams
   end
 
   def new
