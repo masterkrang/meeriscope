@@ -7,7 +7,7 @@
       <div class="panel-body">
         <%= yield %>
       </div>
-      <% if footer.present? %>
+      <% if defined? footer %>
         <div class="panel-footer">
           <%= footer %>
         </div>

@@ -30,6 +30,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use haml for view templating
 gem 'haml'
 
+gem "simple_form"
+
 # Use devise based authentication
 gem 'devise'
 

@@ -1,0 +1,10 @@
+<%= render :layout => '/shared/panel', :locals => {:title => 'Create Stream' } do %>
+  <%= simple_form_for(@stream, html: { class: 'form-vertical' }) do |f| %>
+    <%= f.input :title, placeholder: "Name of your stream" %>
+    <%= f.input :description, placeholder: "Describe what you are going to stream" %>
+    <%= f.input :location, placeholder: "Where are you going to stream from?" %>
+    <%= f.input :start_time, as: :datetime, html5: true, placeholder: "When are you going to start your stream?" %>
+    <hr>
+    <%= f.submit %>
+  <% end %>
+<% end %>
