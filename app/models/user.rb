@@ -34,20 +34,24 @@ class User < ActiveRecord::Base
 
 
   def update_with_password(params, *options)
-    if encrypted_password.blank?
-      update_attributes(params, *options)
+    if oauth_enabled?
+      update_without_password(params)
     else
       super
     end
   end
 
+  def oauth_enabled?
+    self.identity.present? && self.identity.provider.present?
+  end
+
   protected
   def password_required?
-    super && self.identity.provider.blank?
+    !oauth_enabled?
   end
   
   def email_required?
-    super && self.identity.provider.blank?
+    !oauth_enabled?
   end
 
   private
