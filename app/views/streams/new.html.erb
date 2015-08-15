@@ -5,11 +5,11 @@
     <%= f.input :title, placeholder: "Name of your stream" %>
     <%= f.input :description, placeholder: "Describe what you are going to stream" %>
     <%= f.input :location, placeholder: "Where are you going to stream from?" %>
-    <%= f.input :start_time, as: :datetime, html5: true, placeholder: "When are you going to start your stream?" %>
+    <%= f.input :start_time, as: :string, placeholder: "When are you going to start your stream?" %>
     <%= f.input :category, placeholder:"Stream categories" %>
     <hr>
     <h4>Goal</h4>
-    <p><strong>You must reach your goal at least 1 day before the start time</strong></p>
+    <p><strong>You must reach your goal at least one day before the event start time</strong></p>
     <%= f.input :goal, placeholder: "How much money do you need to raise?" %>
     <%= f.input :price, placeholder: "Ticket price for each attendant" %>
     <%= f.submit class:"btn btn-primary" %>
@@ -18,7 +18,7 @@
 
 <script>
   var min_date = new Date();
-  min_date.setDate( min_date.getDate() + 7)
+  min_date.setDate( min_date.getDate() + 6)
 
   jQuery('#stream_start_time').datetimepicker({
     minDate: min_date

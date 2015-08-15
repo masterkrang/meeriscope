@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20150814235321) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.decimal  "price",       precision: 8, scale: 2
-    t.decimal  "decimal",     precision: 8, scale: 2
     t.decimal  "goal",        precision: 8, scale: 2
     t.string   "category"
     t.datetime "created_at",                          null: false
