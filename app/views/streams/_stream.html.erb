@@ -1,5 +1,5 @@
 <div class="stream">
-  <div class="title"><%= stream.title %></div>
+  <div class="title"><%= link_to stream.title, stream %></div>
   <div class="description"><%= simple_format stream.description %></div>
   <div class="start_time"><%= stream.start_time.to_s(:long) %></div>
   <div class="goal">Goal <%= number_to_currency stream.goal %></div>

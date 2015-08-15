@@ -1,11 +1,21 @@
 class StreamsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :except => :show
   def index
     @streams = current_user.streams
   end
 
   def new
     @stream = Stream.new
+  end
+
+  # public stream view
+  def show
+    @stream = Stream.find params[:id]
+  end
+
+  # private stream view
+  def edit
+    @stream = current_user.streams.find params[:id]
   end
 
   def upcoming
