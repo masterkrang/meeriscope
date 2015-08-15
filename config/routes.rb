@@ -13,6 +13,12 @@ Rails.application.routes.draw do
   resources :home, only: :index
   resources :profile, only: :index
 
-  resources :streams
+  resources :streams do
+    collection do
+      get "upcoming"
+      get "finished"
+      get "canceled"
+    end
+  end
 
 end

@@ -1,5 +1,8 @@
 <ul class="nav nav-pills">
   <li role="presentation" <%= selected == "index" ? 'class=active': '' %> ><%= link_to "Dashboard", streams_path %></li>
   <li role="presentation" <%= selected == "new" ? 'class=active': '' %> ><%= link_to "New Stream", new_stream_path %></li>
+  <li role="presentation" <%= selected == "upcoming" ? 'class=active': '' %> ><%= link_to "Upcoming", upcoming_streams_path %></li>
+  <li role="presentation" <%= selected == "finished" ? 'class=active': '' %> ><%= link_to "Finished", finished_streams_path %></li>
+  <li role="presentation" <%= selected == "canceled" ? 'class=active': '' %> ><%= link_to "Canceled", canceled_streams_path %></li>
 </ul>
 <br /><br />
