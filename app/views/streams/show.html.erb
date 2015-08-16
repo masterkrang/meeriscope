@@ -1,1 +1,7 @@
 <H1><%= @stream.title %></H1>
+<div class="description"><%= simple_format @stream.description %></div>
+<div class="start_time"><%= @stream.start_time.to_s(:long) %></div>
+<div class="goal">Goal <%= number_to_currency @stream.goal %></div>
+<div class="raised">Reached <%= number_to_currency @stream.tickets.count * @stream.price %></div>
+
+<button >Buy ticket <%= number_to_currency @stream.price %></button>

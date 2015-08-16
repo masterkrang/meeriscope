@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :streams
   has_many :tickets
+  has_many :bought_streams, :through => :tickets, :source => :stream
 
   def self.from_omniauth(auth)
     User.where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
